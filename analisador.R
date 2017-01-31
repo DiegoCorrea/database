@@ -1,5 +1,5 @@
 #Abrindo o arquivo, setando os nomes das colunas
-data <- read.csv(file="embrapa1.csv", header=TRUE, sep=";",col.names= c("mes","temperatura","P","ETP","ARM","ETR","DEF","EXC","cidade"))
+data <- read.csv(file="embrapaFine.csv", header=TRUE, sep=";",col.names= c("mes","temperatura","P","ETP","ARM","ETR","DEF","EXC","cidade"))
 #Carregando todos os nomes de cidades diferentes e colocando em 1 vetor
 levsCidade <- unique( unlist( lapply( data$cidade , levels ) ) )
 
