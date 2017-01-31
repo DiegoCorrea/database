@@ -1,9 +1,8 @@
 #Abrindo o arquivo, setando os nomes das colunas
 data <- read.csv(file="embrapaFine.csv", header=TRUE, sep=";",col.names= c("mes","temperatura","P","ETP","ARM","ETR","DEF","EXC","cidade"))
-#Carregando todos os nomes de cidades diferentes e colocando em 1 vetor
-levsCidade <- unique( unlist( lapply( data$cidade , levels ) ) )
 
-
+cat("\n----------------------------------------------\n")
+print("Dados Calculados a partir de todas as entradas")
 print("=Temperatura\n")
 print("--Menor") 
 print(min(as.numeric(sub(",",".",data$temperatura))))
@@ -12,34 +11,46 @@ print(mean(as.numeric(sub(",",".",data$temperatura))))
 print("--Maior")
 print(max(as.numeric(sub(",",".",data$temperatura))))
 
-
+#####################################################################
+#Carregando todos os nomes de cidades diferentes e colocando em 1 vetor
+levsCidade <- unique( unlist( lapply( data$cidade , levels ) ) )
+cat("\n----------------------------------------------\n")
 cat("\nMenor, Maior e Média por Cidade\n")
 for (i in levsCidade) {
   cat("\nCidade: ", i,"\n")
   cid <- subset(data, cidade == i)
 
-  print("=Temperatura: ")
-  print("--Menor") 
+  cat("\n+Temperatura: \n")
+  print("---Menor") 
   print(min(as.numeric(sub(",",".",cid$temperatura))))
-  print("--Media") 
+  print("---Media") 
   print(mean(as.numeric(sub(",",".",cid$temperatura))))
-  print("--Maior")
+  print("---Maior")
   print(max(as.numeric(sub(",",".",cid$temperatura))))
+
+  cat("\n+P: \n")
+  print("---Menor") 
+  print(min(cid$P))
+  print("---Media") 
+  print(mean(cid$P))
+  print("---Maior")
+  print(max(cid$P))
 }
 
+##########################################################
 levsMes <- unique( unlist( lapply( data$mes , levels ) ) )
-
+cat("\n----------------------------------------------\n")
 cat("\nMenor, Maior e Média por Mês\n")
 for (i in levsMes) {
-  cat("\nCidade: ", i,"\n")
+  cat("\nMês: ", i,"\n")
   mes <- subset(data, mes == i)
 
-  print("=Temperatura: ")
-  print("--Menor") 
+  cat("\n+Temperatura: \n")
+  print("---Menor") 
   print(min(as.numeric(sub(",",".",mes$temperatura))))
-  print("--Media") 
+  print("---Media") 
   print(mean(as.numeric(sub(",",".",mes$temperatura))))
-  print("--Maior")
+  print("---Maior")
   print(max(as.numeric(sub(",",".",mes$temperatura))))
 }
 
