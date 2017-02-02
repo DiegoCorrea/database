@@ -1,22 +1,16 @@
-# Abrindo o arquivo, setando os nomes das colunas
+getmode <- function(v) {
+  uniqv <- unique(v)
+  uniqv[which.max(tabulate(match(v, uniqv)))]
+}
+
 database <- read.csv(file="embrapaFine.csv", header=TRUE, sep=";", col.names= c("mes","temperatura","P","ETP","ARM","ETR","DEF","EXC","cidade"), encoding= "UFT8")
 
-#####################################################################
-#Carregando todos os nomes de cidades diferentes e colocando em 1 vetor
 levsCidade <- unique( unlist( lapply( database$cidade , levels ) ) )
+
 cat("\n----------------------------------------------\n")
-cat("\nMenor, Maior e Média por Cidade\n")
 for (i in levsCidade) {
   cat("\nCidade: ", i,"\n")
   cid <- subset(database, cidade == i)
-
-  getmode <- function(v) {
-    uniqv <- unique(v)
-    uniqv[which.max(tabulate(match(v, uniqv)))]
-  }
-  print("--Moda")
-  result <- getmode(as.numeric(sub(",",".",cid$temperatura)))
-  print(result)
 
   png(sprintf("images/cidade/temperatura/%s.png",i))
   plot(as.numeric(sub(",",".",cid$temperatura)), 
@@ -29,6 +23,12 @@ for (i in levsCidade) {
   #grid cria quadrantes no gráfico, essas linhas da divisoria, terão a cor vermelha
   grid(col="red")
 
+  texto <- sprintf("Menor Temperatura: %f\nMedia: %f\nMaior: %f",min(as.numeric(sub(",",".",cid$temperatura))),mean(as.numeric(sub(",",".",cid$temperatura))),max(as.numeric(sub(",",".",cid$temperatura))))
+  mtext(texto, side=1, valign="center", cex=0.8, halign= "left", mar=c(0,0,0,0), col="black", line=1)  
+
+  dev.off()
+
+  cat("\nMenor, Maior e Média por Cidade\n")
   cat("\n+Temperatura: \n")
   print("---Menor")
   print(min(as.numeric(sub(",",".",cid$temperatura))))
@@ -38,11 +38,9 @@ for (i in levsCidade) {
   print(max(as.numeric(sub(",",".",cid$temperatura))))
   print("--Mediana")
   print(median(as.numeric(sub(",",".",cid$temperatura))))
+  print("--Moda")
+  print(getmode(as.numeric(sub(",",".",cid$temperatura))))
 
-  texto <- sprintf("Menor Temperatura: %f\nMedia: %f\nMaior: %f",min(as.numeric(sub(",",".",cid$temperatura))),mean(as.numeric(sub(",",".",cid$temperatura))),max(as.numeric(sub(",",".",cid$temperatura))))
-  mtext(texto, side=1, valign="center", cex=0.8, halign= "left", mar=c(0,0,0,0), col="black", line=1)  
-
-  dev.off()
 }
 
 ##########################################################
