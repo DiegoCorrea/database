@@ -29,7 +29,7 @@ for (i in levsCidade) {
 
   dev.off()
 
-  cat("\nMenor, Maior e Média por Cidade\n")
+  cat("\nMenor, Maior, Média, Mediana e Moda\n")
   cat("\n+Temperatura: \n")
   print("---Menor")
   print(min(cid$temperatura))
@@ -44,49 +44,48 @@ for (i in levsCidade) {
 }
 
 ##########################################################
-levsMes <- unique( unlist( lapply( database$mes , levels ) ) )
+levsMes <- unique(database$mes)
 cat("\n----------------------------------------------\n")
-cat("\nMenor, Maior e Média por Mês\n")
 dadosTemperatura <- data.frame(
   menor = c(),
   maior = c(),
   media = c(),
   mediana = c(),
-  moda = c()
+  moda = c(),
+  mes = c()
 )
 for (i in levsMes) {
-
-  cat("\nMês: ", i,"\n")
   mes <- subset(database, mes == i)
 
-  cat("\n+Temperatura: \n")
-  print("---Menor") 
-  tmp.menor <- min(mes$temperatura)
-  dadosTemperatura$menor <- c(dadosTemperatura$menor, tmp.menor)
-  print(tmp.menor)
+  tmp <- data.frame(
+    menor = min(mes$temperatura),
+    maior = max(mes$temperatura),
+    media = mean(mes$temperatura),
+    mediana = median(mes$temperatura),
+    moda = getmode(mes$temperatura),
+    mes = i
+  )
 
-  print("---Media") 
-  tmp.media <- mean(mes$temperatura)
-  print(tmp.media)
-
-  print("---Maior")
-  tmp.maior <- max(mes$temperatura)
-  print(tmp.maior)
-
-  print("--Mediana")
-  tmp.mediana <- median(mes$temperatura)
-  print(tmp.mediana)
-
-  print("--Moda")
-  tmp.moda <- getmode(mes$temperatura)
-  print(tmp.moda)
-
-  #dadosTemperatura$menor <- rbind(men)
-  #dadosTemperatura$maior <- rbind(mai)
-  #dadosTemperatura$mediana <- rbind(medi)
-  #dadosTemperatura$moda <- rbind(moda)
-  #dadosTemperatura$media <- rbind(med)
+  dadosTemperatura <- rbind(dadosTemperatura, tmp)
 }
+cat("\n----------------------------------------------\n")
+print(dadosTemperatura)
+
+png(sprintf("images/temperaturaPorMes.png"))
+plot(dadosTemperatura$media, 
+type="o",
+col="green", 
+main="Temperatura vs Mês",
+xlab="Mês",
+ylab="Temperatura")
+v <- c(7,12,28,3,41)
+t <- c(14,7,6,19,3)
+lines(v, type = "o", col = "red")
+lines(dadosTemperatura$menor, type = "o", col = "blue")
+#grid cria quadrantes no gráfico, essas linhas da divisoria, terão a cor vermelha
+grid(col="red")
+dev.off()
+cat("\n----------------------------------------------\n")
 
 cat("\n----------------------------------------------\n")
 print("Dados Calculados a partir de todas as entradas")
