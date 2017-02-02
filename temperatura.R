@@ -78,7 +78,7 @@ col="green",
 main="Temperatura vs Mês",
 xlab="Mês",
 ylab="Temperatura")
-v <- c(7,12,28,3,41)
+v <- dadosTemperatura$maior
 t <- c(14,7,6,19,3)
 lines(v, type = "o", col = "red")
 lines(dadosTemperatura$menor, type = "o", col = "blue")
