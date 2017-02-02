@@ -72,16 +72,17 @@ cat("\n----------------------------------------------\n")
 print(dadosTemperatura)
 
 png(sprintf("images/temperaturaPorMes.png"))
-plot(dadosTemperatura$media, 
+plot(c(1,12), c(15,30), 
 type="o",
-col="green", 
+col="white", 
 main="Temperatura vs Mês",
 xlab="Mês",
 ylab="Temperatura")
-v <- dadosTemperatura$maior
-t <- c(14,7,6,19,3)
-lines(v, type = "o", col = "red")
-lines(dadosTemperatura$menor, type = "o", col = "blue")
+lines(dadosTemperatura$mes, dadosTemperatura$maior, type = "o", col = "red")
+lines(dadosTemperatura$mes, dadosTemperatura$menor, type = "o", col = "blue")
+lines(dadosTemperatura$mes, dadosTemperatura$media, type = "o", col = "green")
+lines(dadosTemperatura$mes, dadosTemperatura$mediana, type = "o", col = "black")
+lines(dadosTemperatura$mes, dadosTemperatura$moda, type = "o", col = "pink")
 #grid cria quadrantes no gráfico, essas linhas da divisoria, terão a cor vermelha
 grid(col="red")
 dev.off()
