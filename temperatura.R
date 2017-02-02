@@ -3,7 +3,8 @@ getmode <- function(v) {
   uniqv[which.max(tabulate(match(v, uniqv)))]
 }
 
-database <- read.csv(file="embrapaFine.csv", header=TRUE, sep=";", col.names= c("mes","temperatura","P","ETP","ARM","ETR","DEF","EXC","cidade"), encoding= "UFT8")
+database <- read.csv(file="embrapaFine.csv", header=TRUE, sep=";", col.names= c("mes","temperatura","pluviometrico","evaPotencial","armazenHidrico","evaReal","defHidrica","excedHidrico","cidade"), encoding= "UFT8")
+database$temperatura <- as.numeric(sub(",",".",database$temperatura))
 
 levsCidade <- unique( unlist( lapply( database$cidade , levels ) ) )
 
@@ -13,7 +14,7 @@ for (i in levsCidade) {
   cid <- subset(database, cidade == i)
 
   png(sprintf("images/cidade/temperatura/%s.png",i))
-  plot(as.numeric(sub(",",".",cid$temperatura)), 
+  plot(cid$temperatura, 
   type="o",
   col="blue", 
   main=sprintf("%s\n Mês vs Temperatura\n", i),
@@ -23,7 +24,7 @@ for (i in levsCidade) {
   #grid cria quadrantes no gráfico, essas linhas da divisoria, terão a cor vermelha
   grid(col="red")
 
-  texto <- sprintf("Menor Temperatura: %f\nMedia: %f\nMaior: %f",min(as.numeric(sub(",",".",cid$temperatura))),mean(as.numeric(sub(",",".",cid$temperatura))),max(as.numeric(sub(",",".",cid$temperatura))))
+  texto <- sprintf("Média: %f", mean(cid$temperatura))
   mtext(texto, side=1, valign="center", cex=0.8, halign= "left", mar=c(0,0,0,0), col="black", line=1)  
 
   dev.off()
@@ -31,15 +32,15 @@ for (i in levsCidade) {
   cat("\nMenor, Maior e Média por Cidade\n")
   cat("\n+Temperatura: \n")
   print("---Menor")
-  print(min(as.numeric(sub(",",".",cid$temperatura))))
+  print(min(cid$temperatura))
   print("---Maior")
-  print(max(as.numeric(sub(",",".",cid$temperatura))))
+  print(max(cid$temperatura))
   print("---Media")
-  print(mean(as.numeric(sub(",",".",cid$temperatura))))
+  print(mean(cid$temperatura))
   print("--Mediana")
-  print(median(as.numeric(sub(",",".",cid$temperatura))))
+  print(median(cid$temperatura))
   print("--Moda")
-  print(getmode(as.numeric(sub(",",".",cid$temperatura))))
+  print(getmode(cid$temperatura))
 }
 
 ##########################################################
@@ -60,28 +61,24 @@ for (i in levsMes) {
 
   cat("\n+Temperatura: \n")
   print("---Menor") 
-  tmp.menor <- min(as.numeric(sub(",",".",mes$temperatura)))
+  tmp.menor <- min(mes$temperatura)
   dadosTemperatura$menor <- c(dadosTemperatura$menor, tmp.menor)
   print(tmp.menor)
 
   print("---Media") 
-  tmp.media <- mean(as.numeric(sub(",",".",mes$temperatura)))
+  tmp.media <- mean(mes$temperatura)
   print(tmp.media)
 
   print("---Maior")
-  tmp.maior <- max(as.numeric(sub(",",".",mes$temperatura)))
+  tmp.maior <- max(mes$temperatura)
   print(tmp.maior)
 
   print("--Mediana")
-  tmp.mediana <- median(as.numeric(sub(",",".",mes$temperatura)))
+  tmp.mediana <- median(mes$temperatura)
   print(tmp.mediana)
 
-  getmode <- function(v) {
-    uniqv <- unique(v)
-    uniqv[which.max(tabulate(match(v, uniqv)))]
-  }
   print("--Moda")
-  tmp.moda <- getmode(as.numeric(sub(",",".",mes$temperatura)))
+  tmp.moda <- getmode(mes$temperatura)
   print(tmp.moda)
 
   #dadosTemperatura$menor <- rbind(men)
@@ -95,12 +92,12 @@ cat("\n----------------------------------------------\n")
 print("Dados Calculados a partir de todas as entradas")
 print("=Temperatura")
 print("--Menor")
-print(min(as.numeric(sub(",",".",database$temperatura))))
+print(min(database$temperatura))
 print("--Maior")
-print(max(as.numeric(sub(",",".",database$temperatura))))
+print(max(database$temperatura))
 print("--Media")
-print(mean(as.numeric(sub(",",".",database$temperatura))))
+print(mean(database$temperatura))
 print("--Mediana")
-print(median(as.numeric(sub(",",".",database$temperatura))))
+print(median(database$temperatura))
 print("--Moda")
-print(getmode(as.numeric(sub(",",".",database$temperatura))))
+print(getmode(database$temperatura))
