@@ -32,15 +32,14 @@ for (i in levsCidade) {
   cat("\n+Temperatura: \n")
   print("---Menor")
   print(min(as.numeric(sub(",",".",cid$temperatura))))
-  print("---Media")
-  print(mean(as.numeric(sub(",",".",cid$temperatura))))
   print("---Maior")
   print(max(as.numeric(sub(",",".",cid$temperatura))))
+  print("---Media")
+  print(mean(as.numeric(sub(",",".",cid$temperatura))))
   print("--Mediana")
   print(median(as.numeric(sub(",",".",cid$temperatura))))
   print("--Moda")
   print(getmode(as.numeric(sub(",",".",cid$temperatura))))
-
 }
 
 ##########################################################
@@ -97,16 +96,11 @@ print("Dados Calculados a partir de todas as entradas")
 print("=Temperatura")
 print("--Menor")
 print(min(as.numeric(sub(",",".",database$temperatura))))
-print("--Media")
-print(mean(as.numeric(sub(",",".",database$temperatura))))
 print("--Maior")
 print(max(as.numeric(sub(",",".",database$temperatura))))
+print("--Media")
+print(mean(as.numeric(sub(",",".",database$temperatura))))
 print("--Mediana")
 print(median(as.numeric(sub(",",".",database$temperatura))))
-getmode <- function(v) {
-   uniqv <- unique(v)
-   uniqv[which.max(tabulate(match(v, uniqv)))]
-}
 print("--Moda")
-result <- getmode(as.numeric(sub(",",".",database$temperatura)))
-print(result)
+print(getmode(as.numeric(sub(",",".",database$temperatura))))
