@@ -83,6 +83,16 @@ lines(dadosTemperatura$mes, dadosTemperatura$menor, type = "o", col = "blue")
 lines(dadosTemperatura$mes, dadosTemperatura$media, type = "o", col = "green")
 lines(dadosTemperatura$mes, dadosTemperatura$mediana, type = "o", col = "black")
 lines(dadosTemperatura$mes, dadosTemperatura$moda, type = "o", col = "pink")
+legend("bottomright",
+  inset=.05,
+  cex = 0.5,
+  title="Legenda",
+  c("Maior","Menor","Media","Mediana","Moda"),
+  horiz=TRUE,
+  lty=c(1,1),
+  lwd=c(2,2),
+  col=c("red","blue","green","black","pink"),
+  bg="grey96")
 #grid cria quadrantes no gráfico, essas linhas da divisoria, terão a cor vermelha
 grid(col="red")
 dev.off()
