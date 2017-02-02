@@ -1,14 +1,14 @@
 # Abrindo o arquivo, setando os nomes das colunas
-data <- read.csv(file="embrapaFine.csv", header=TRUE, sep=";",col.names= c("mes","temperatura","P","ETP","ARM","ETR","DEF","EXC","cidade"), encoding= "UFT8")
+database <- read.csv(file="embrapaFine.csv", header=TRUE, sep=";", col.names= c("mes","temperatura","P","ETP","ARM","ETR","DEF","EXC","cidade"), encoding= "UFT8")
 
 #####################################################################
 #Carregando todos os nomes de cidades diferentes e colocando em 1 vetor
-levsCidade <- unique( unlist( lapply( data$cidade , levels ) ) )
+levsCidade <- unique( unlist( lapply( database$cidade , levels ) ) )
 cat("\n----------------------------------------------\n")
 cat("\nMenor, Maior e Média por Cidade\n")
 for (i in levsCidade) {
   cat("\nCidade: ", i,"\n")
-  cid <- subset(data, cidade == i)
+  cid <- subset(database, cidade == i)
 
   getmode <- function(v) {
     uniqv <- unique(v)
@@ -46,7 +46,7 @@ for (i in levsCidade) {
 }
 
 ##########################################################
-levsMes <- unique( unlist( lapply( data$mes , levels ) ) )
+levsMes <- unique( unlist( lapply( database$mes , levels ) ) )
 cat("\n----------------------------------------------\n")
 cat("\nMenor, Maior e Média por Mês\n")
 dadosTemperatura <- data.frame(
@@ -59,7 +59,7 @@ dadosTemperatura <- data.frame(
 for (i in levsMes) {
 
   cat("\nMês: ", i,"\n")
-  mes <- subset(data, mes == i)
+  mes <- subset(database, mes == i)
 
   cat("\n+Temperatura: \n")
   print("---Menor") 
@@ -98,17 +98,17 @@ cat("\n----------------------------------------------\n")
 print("Dados Calculados a partir de todas as entradas")
 print("=Temperatura")
 print("--Menor")
-print(min(as.numeric(sub(",",".",data$temperatura))))
+print(min(as.numeric(sub(",",".",database$temperatura))))
 print("--Media")
-print(mean(as.numeric(sub(",",".",data$temperatura))))
+print(mean(as.numeric(sub(",",".",database$temperatura))))
 print("--Maior")
-print(max(as.numeric(sub(",",".",data$temperatura))))
+print(max(as.numeric(sub(",",".",database$temperatura))))
 print("--Mediana")
-print(median(as.numeric(sub(",",".",data$temperatura))))
+print(median(as.numeric(sub(",",".",database$temperatura))))
 getmode <- function(v) {
    uniqv <- unique(v)
    uniqv[which.max(tabulate(match(v, uniqv)))]
 }
 print("--Moda")
-result <- getmode(as.numeric(sub(",",".",data$temperatura)))
+result <- getmode(as.numeric(sub(",",".",database$temperatura)))
 print(result)
