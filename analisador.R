@@ -1,5 +1,5 @@
 # Abrindo o arquivo, setando os nomes das colunas
-data <- read.csv(file="embrapaFine.csv", header=TRUE, sep=";",col.names= c("mes","temperatura","pluviometrico","evaPotencial","armazenHidrico","evaReal","defHidrica","excedHidrico","cidade"), encoding= "UFT8")
+data <- read.csv(file="embrapaFine.csv", header=TRUE, sep=";", col.names= c("mes","temperatura","pluviometrico","evaPotencial","armazenHidrico","evaReal","defHidrica","excedHidrico","cidade"), encoding= "UFT8")
 
 cat("\n----------------------------------------------\n")
 print("Dados Calculados a partir de todas as entradas")
