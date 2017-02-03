@@ -40,20 +40,23 @@ for (i in levsCidade) {
   cat("======>> maxTemp do vetor2 = ", vetor2[i])
 }
 
-png(sprintf("images/dispersaoTempVSChuvas.png",i))
+# Inicio da imagem png
+png(sprintf("images/dispersaoTempVSChuvas.png"))
   plot(vetor, vetor2,
-  main=sprintf("\n Teste\n"),
+  main=sprintf("Teste"),
   lwd=3,
   xlab="TST",
   ylab="TST")
   #grid cria quadrantes no gráfico, essas linhas da divisoria, terão a cor vermelha
   grid(col="red")
-  abline(lm(vetor2~vetor))  # reta de regressão linear no gráfico de dispersão
+
+  abline(lm(vetor2~vetor)) # reta de regressão linear no gráfico de dispersão
 
   texto <- sprintf("Teste")
   mtext(texto, side=1, valign="center", cex=0.8, halign= "left", mar=c(0,0,0,0), col="black", line=1)  
 
 dev.off()
+# Fim da imagem png
 
 ##########################################################
 levsMes <- unique( unlist( lapply( database$mes , levels ) ) )
