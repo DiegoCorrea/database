@@ -42,7 +42,7 @@ for (i in levsCidade) {
 
 png(sprintf("images/dispersaoTempVSChuvas.png",i))
   plot(vetor, vetor2,
-  main=sprintf("%s\n Teste\n", i),
+  main=sprintf("\n Teste\n"),
   lwd=3,
   xlab="TST",
   ylab="TST")
