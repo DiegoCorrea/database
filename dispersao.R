@@ -34,25 +34,29 @@ for (i in levsCidade) {
   maxTemp <- max(as.numeric(sub(",",".",cid$temperatura)))
   print(maxTemp)
 
+  mediaPluv <- mean(as.numeric(cid$pluviometrico))
+  print("Media mediaPluv")
+  print(mediaPluv)
+
   vetor[i] <- mediaTemp
   cat("======>> mediaTemp do vetor = ", vetor[i])
-  vetor2[i] <- maxTemp
-  cat("======>> maxTemp do vetor2 = ", vetor2[i])
+  vetor2[i] <- mediaPluv
+  cat("======>> mediaPluv do vetor2 = ", vetor2[i])
 }
 
 # Inicio da imagem png
 png(sprintf("images/dispersaoTempVSChuvas.png"))
   plot(vetor, vetor2,
-  main=sprintf("Teste"),
+  main=sprintf(":: Dispersão de Temperatura e Índice Pluviométrico ::"),
   lwd=3,
-  xlab="TST",
-  ylab="TST")
+  xlab="Temperatura",
+  ylab="Índice Pluviométrico")
   #grid cria quadrantes no gráfico, essas linhas da divisoria, terão a cor vermelha
   grid(col="red")
 
   abline(lm(vetor2~vetor)) # reta de regressão linear no gráfico de dispersão
 
-  texto <- sprintf("Teste")
+  texto <- sprintf("Legenda")
   mtext(texto, side=1, valign="center", cex=0.8, halign= "left", mar=c(0,0,0,0), col="black", line=1)  
 
 dev.off()
