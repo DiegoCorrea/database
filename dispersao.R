@@ -92,3 +92,9 @@ for (i in levsMes) {
 # grid cria quadrantes no gráfico, essas linhas da divisoria, terão a cor vermelha
 #grid(col="red")
 #dev.off()
+
+png(sprintf("images/testeBoxPlot.png"))
+  boxplot(database, las = 2)
+
+dev.off()
+# Fim da imagem png
