@@ -32,9 +32,12 @@ for (i in levsMes) {
   vecMediaPluv[i] <- mediaPluv
   cat("======>> mediaPluv do vecMediaPluv = ", vecMediaPluv[i])
 }
-
+mainDir <- "."
+subDir <- "images"
+dir.create(file.path(mainDir, subDir), showWarnings = FALSE)
+setwd(file.path(mainDir, subDir))
 # Inicio da imagem png
-png(sprintf("images/dispersaoTempVSChuvas.png"))
+png(sprintf("dispersaoTempVSChuvas.png"))
   plot(vecMediaTemp, vecMediaPluv,
   main=sprintf(":: Dispersão de Temperatura e Índice Pluviométrico ::"),
   lwd=3,
@@ -52,7 +55,7 @@ dev.off()
 # Fim da imagem png
 
 ##########################################################
-png(sprintf("images/testeBoxPlot.png"))
+png(sprintf("testeBoxPlot.png"))
   boxplot(database, las = 2)
 dev.off()
 # Fim da imagem png

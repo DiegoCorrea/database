@@ -34,8 +34,11 @@ for (i in levsMes) {
   dadosTemperatura <- rbind(dadosTemperatura, tmp)
 }
 cat("\n----------------------------------------------\n")
-
-png(sprintf("images/temperaturaPorMes.png"))
+mainDir <- "."
+subDir <- "images"
+dir.create(file.path(mainDir, subDir), showWarnings = FALSE)
+setwd(file.path(mainDir, subDir))
+png(sprintf("temperaturaPorMes.png"))
 plot(c(1,12), c(15,30), 
 type="o",
 col="white", 
