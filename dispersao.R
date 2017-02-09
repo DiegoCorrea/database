@@ -39,7 +39,7 @@ setwd(file.path(mainDir, subDir))
 # Inicio da imagem png
 png(sprintf("dispersaoTempVSChuvas.png"))
   plot(vecMediaTemp, vecMediaPluv,
-  main=sprintf(":: Dispersão de Temperatura e Índice Pluviométrico ::"),
+  main=sprintf("Dispersão de Temperatura e Índice Pluviométrico"),
   lwd=3,
   xlab="Temperatura",
   ylab="Índice Pluviométrico")
@@ -55,8 +55,10 @@ dev.off()
 # Fim da imagem png
 
 ##########################################################
-png(sprintf("testeBoxPlot.png"))
-  boxplot(database, las = 2)
+
+data <- data.frame(database$temperatura, database$pluviometrico, database$evaPotencial, database$armazenHidrico, database$evaReal, database$defHidrica, database$excedHidrico)
+png(sprintf("Boxplot.png"))
+  boxplot(data, ylab = "", names = c("T", "P", "ETP", "ARM", "ETR", "DEF", "EXC"))
 dev.off()
 # Fim da imagem png
 
