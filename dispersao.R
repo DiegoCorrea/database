@@ -56,7 +56,7 @@ dev.off()
 
 ##########################################################
 png(sprintf("testeBoxPlot.png"))
-  boxplot(database, las = 2)
+boxplot(database, las = 2)
 dev.off()
 # Fim da imagem png
 
