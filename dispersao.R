@@ -41,8 +41,8 @@ png(sprintf("dispersaoTempVSChuvas.png"))
   plot(vecMediaTemp, vecMediaPluv,
   main=sprintf("Dispersão de Temperatura e Índice Pluviométrico"),
   lwd=3,
-  xlab="Temperatura",
-  ylab="Índice Pluviométrico")
+  xlab="Temperatura(°C)",
+  ylab="Índice Pluviométrico(mm)")
   #grid cria quadrantes no gráfico, essas linhas da divisoria, terão a cor vermelha
   grid(col="red")
   textxy(vecMediaTemp, vecMediaPluv,levsMes)

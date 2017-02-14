@@ -38,18 +38,25 @@ mainDir <- "."
 subDir <- "images"
 dir.create(file.path(mainDir, subDir), showWarnings = FALSE)
 setwd(file.path(mainDir, subDir))
-png(sprintf("temperaturaPorMes.png"))
+png(
+  sprintf("temperaturaPorMes.png"),
+  width     = 2.0,
+  height    = 2.0,
+  units     = "in",
+  res       = 600,
+  pointsize = 4)
+
 plot(c(1,12), c(15,30), 
 type="o",
-col="white", 
+col="white",
 main="Temperatura vs Mês",
 xlab="Mês",
-ylab="Temperatura")
-lines(dadosTemperatura$mes, dadosTemperatura$maior, type = "o", col = "red")
-lines(dadosTemperatura$mes, dadosTemperatura$menor, type = "o", col = "blue")
-lines(dadosTemperatura$mes, dadosTemperatura$media, type = "o", col = "green")
-lines(dadosTemperatura$mes, dadosTemperatura$mediana, type = "o", col = "black")
-lines(dadosTemperatura$mes, dadosTemperatura$moda, type = "o", col = "pink")
+ylab="Temperatura(°C)")
+lines(dadosTemperatura$mes, dadosTemperatura$maior, type = "o", col = "red", lwd = 0.5)
+lines(dadosTemperatura$mes, dadosTemperatura$menor, type = "o", col = "blue", lwd = 0.5)
+lines(dadosTemperatura$mes, dadosTemperatura$media, type = "o", col = "green", lwd = 0.5)
+lines(dadosTemperatura$mes, dadosTemperatura$mediana, type = "o", col = "black", lwd = 0.5)
+lines(dadosTemperatura$mes, dadosTemperatura$moda, type = "o", col = "pink", lwd = 0.5)
 legend("bottomright",
   inset=.05,
   cex = 0.5,
@@ -61,20 +68,5 @@ legend("bottomright",
   col=c("red","blue","green","black","pink"),
   bg="grey96")
 #grid cria quadrantes no gráfico, essas linhas da divisoria, terão a cor vermelha
-grid(col="red")
+grid(col="red", lwd = 0.5)
 dev.off()
-cat("\n----------------------------------------------\n")
-
-cat("\n----------------------------------------------\n")
-print("Dados Calculados a partir de todas as entradas")
-print("=Temperatura")
-print("--Menor")
-print(min(database$temperatura))
-print("--Maior")
-print(max(database$temperatura))
-print("--Media")
-print(mean(database$temperatura))
-print("--Mediana")
-print(median(database$temperatura))
-print("--Moda")
-print(getmode(database$temperatura))

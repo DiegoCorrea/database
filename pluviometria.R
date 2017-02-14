@@ -39,27 +39,27 @@ subDir <- "images"
 dir.create(file.path(mainDir, subDir), showWarnings = FALSE)
 setwd(file.path(mainDir, subDir))
 png(sprintf("pluviometriaPorMes.png"))
-plot(c(1,12), c(min(database$pluviometrico),max(database$pluviometrico)), 
+plot(c(1,12), c(min(database$pluviometrico),max(database$pluviometrico) + 50), 
 type="o",
 col="white", 
 main="Pluviometria vs Mês",
 xlab="Mês",
-ylab="Pluviometria")
+ylab="Pluviometria(mm)")
 lines(dadosPluviometrico$mes, dadosPluviometrico$maior, type = "o", col = "red")
 lines(dadosPluviometrico$mes, dadosPluviometrico$menor, type = "o", col = "blue")
 lines(dadosPluviometrico$mes, dadosPluviometrico$media, type = "o", col = "green")
 lines(dadosPluviometrico$mes, dadosPluviometrico$mediana, type = "o", col = "black")
 lines(dadosPluviometrico$mes, dadosPluviometrico$moda, type = "o", col = "pink")
-# legend("bottomright",
-#  inset=.05,
-#  cex = 0.5,
-#  title="Legenda",
-#  c("Maior","Menor","Media","Mediana","Moda"),
-#  horiz=TRUE,
-#  lty=c(1,1),
-#  lwd=c(2,2),
-#  col=c("red","blue","green","black","pink"),
-#  bg="grey96")
+legend("topright",
+ inset=.05,
+ cex = 0.5,
+ title="Legenda",
+ c("Maior","Menor","Media","Mediana","Moda"),
+ horiz=TRUE,
+ lty=c(1,1),
+ lwd=c(2,2),
+ col=c("red","blue","green","black","pink"),
+ bg="grey96")
 #grid cria quadrantes no gráfico, essas linhas da divisoria, terão a cor vermelha
 grid(col="red")
 dev.off()
@@ -107,7 +107,7 @@ type="o",
 col="white", 
 main="Transpiração vs Mês",
 xlab="Mês",
-ylab="Transpiração")
+ylab="Transpiração(mm)")
 lines(dadosEvapo$mes, dadosEvapo$def, type = "o", col = "red")
 lines(dadosEvapo$mes, dadosEvapo$etp, type = "o", col = "blue")
 lines(dadosEvapo$mes, dadosEvapo$etr, type = "o", col = "green")
