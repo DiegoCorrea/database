@@ -6,9 +6,8 @@ getmode <- function(v) {
   uniqv[which.max(tabulate(match(v, uniqv)))]
 }
 # Abrindo o arquivo, setando os nomes das colunas
-database <- read.csv(file="embrapaFine.csv", header=TRUE, sep=";", col.names= c("mes","temperatura","pluviometrico","evaPotencial","armazenHidrico","evaReal","defHidrica","excedHidrico","cidade"), encoding= "UFT8")
-database$temperatura <- as.numeric(sub(",",".",database$temperatura))
-database$pluviometrico <- as.numeric(sub(",",".",database$pluviometrico))
+database <- read.csv(file="embrapaClean.csv", header=TRUE, sep=",", encoding= "UFT8")
+
 
 dados <- data.frame(database$temperatura, database$pluviometrico, database$evaPotencial, database$armazenHidrico, database$evaReal, database$defHidrica, database$excedHidrico)
 

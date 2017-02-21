@@ -3,9 +3,7 @@ getmode <- function(v) {
   uniqv[which.max(tabulate(match(v, uniqv)))]
 }
 
-database <- read.csv(file="C:/Users/Romilson/Documents/R/database-master/embrapaFine.csv", header=TRUE, sep=";", col.names= c("mes","temperatura","pluviometrico","evaPotencial","armazenHidrico","evaReal","defHidrica","excedHidrico","cidade"), encoding= "UFT8")
-database$temperatura <- as.numeric(sub(",",".",database$temperatura))
-database$pluviometrico <- as.numeric(sub(",",".",database$pluviometrico))
+database <- read.csv(file="embrapaClean.csv", header=TRUE, sep=",", encoding= "UFT8")
 
 database['PETP'] <- c(database$pluviometrico - database$evaPotencial)
 
