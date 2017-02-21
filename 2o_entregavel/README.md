@@ -12,3 +12,4 @@ Arquivo principal: Feature-Selection.R
 	-->>> Acho que podemos eliminar as linhas onde o ARM é menor que 100 (ou tirar esses valores) pois nesses casos o EXC é sempre 0. Dessa forma poderíamos estar eliminando outliers
 
 6. Através dos dados do novo arquivo embrapaFine2o.csv todos os outros eliminados podem ser criados
+7. Referência: http://wiki.icmc.usp.br/images/a/ab/Prcomp.pdf
