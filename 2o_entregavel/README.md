@@ -1,3 +1,5 @@
+Arquivo principal: Feature-Selection.R
+
 1. Remover o "evaReal", "defHidrica", "excedHidrico" com base na saída do summary(acpcor) do Feature-Selection.R e na análise estatística dos scripts feitos
 2. ETr é menor ou no máximo igual a ETp
 3. DEF = ETP – ETR
