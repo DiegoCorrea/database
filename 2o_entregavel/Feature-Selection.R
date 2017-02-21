@@ -60,9 +60,9 @@ plot(acpcor)
 
 ##arq <- file("embrapaFine2o.csv", encoding = "UTF-8")
 
-write.csv(data.frame(mes = database$mes,
-					temperatura = database$temperatura,
-					pluviometrico = database$pluviometrico,
-					evaPotencial = database$evaPotencial,
-					armazenHidrico = database$armazenHidrico,
-					cidade = database$cidade), "embrapaAtributossDeletados.csv", row.names=FALSE)
+write.csv(data.frame(Mes = database$mes,
+					T = database$temperatura,
+					P = database$pluviometrico,
+					ETP = database$evaPotencial,
+					ARM = database$armazenHidrico,
+					Cidade = database$cidade), "embrapaAtributosDeletados.csv", row.names=FALSE)
