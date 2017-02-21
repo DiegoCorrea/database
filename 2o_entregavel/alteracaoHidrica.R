@@ -2,7 +2,7 @@ getmode <- function(v) {
   uniqv <- unique(v)
   uniqv[which.max(tabulate(match(v, uniqv)))]
 }
-database <- read.csv(file="embrapaFine.csv", header=TRUE, sep=";", col.names= c("mes","temperatura","pluviometrico","evaPotencial","armazenHidrico","evaReal","defHidrica","excedHidrico","cidade"), encoding= "UFT8")
+database <- read.csv(file="embrapaClean.csv", header=TRUE, sep=",", encoding= "UFT8")
 
 database['altHidrico'] <- c(database$pluviometrico - database$evaReal - database$excedHidrico)
 
@@ -15,7 +15,12 @@ dadosALT <- data.frame(
   media = c(),
   mediana = c(),
   moda = c(),
-  mes = c()
+
+  mes = c(),
+
+  etr = c(),
+  p = c(),
+  exc = c()
 )
 for (i in levsMes) {
   mes <- subset(database, mes == i)
@@ -26,7 +31,12 @@ for (i in levsMes) {
     media = mean(mes$altHidrico),
     mediana = median(mes$altHidrico),
     moda = getmode(mes$altHidrico),
-    mes = i
+
+    mes = i,
+
+    etr = mean(mes$evaReal),
+    p = mean(mes$pluviometrico),
+    exc = mean(mes$excedHidrico)
   )
 
   dadosALT <- rbind(dadosALT, tmp)
@@ -82,3 +92,45 @@ print("--Mediana")
 print(median(database$altHidrico))
 print("--Moda")
 print(getmode(database$altHidrico))
+
+cat("\n----------------------------------------------\n")
+png(sprintf("Alt_P_Etr_Exc_por_Mes.png"),
+  width     = 2.0,
+  height    = 2.0,
+  units     = "in",
+  res       = 600,
+  pointsize = 4)
+plot(c(1,12), c(min(database$altHidrico),max(database$evaPotencial)), 
+type="o",
+col="white", 
+main="Alteração Hídrica\nALT = P - ETR - EXC",
+xlab="Mês",
+ylab="Milímetro")
+lines(dadosALT$mes, dadosALT$p, type = "o", col = "yellow", lwd = 0.5)
+lines(dadosALT$mes, dadosALT$exc, type = "o", col = "blue", lwd = 0.5)
+lines(dadosALT$mes, dadosALT$etr, type = "o", col = "green", lwd = 0.5)
+lines(dadosALT$mes, dadosALT$media, type = "o", col = "black", lwd = 0.5)
+legend("topright",
+ inset=.05,
+ cex = 0.5,
+ title="Legenda",
+ c("pluviometrico","Excedente Hidrico"),
+ horiz=TRUE,
+ lty=c(1,1),
+ lwd=c(2,2),
+ col=c("yellow","blue"),
+ bg="grey96")
+legend("bottomright",
+ inset=.05,
+ cex = 0.5,
+ title="Legenda",
+ c("EvapoTranspiração Real","Alteração Hidrica"),
+ horiz=TRUE,
+ lty=c(1,1),
+ lwd=c(2,2),
+ col=c("green","black"),
+ bg="grey96")
+#grid cria quadrantes no gráfico, essas linhas da divisoria, terão a cor vermelha
+grid(col="red", lwd = 0.5)
+dev.off()
+cat("\n----------------------------------------------\n")
