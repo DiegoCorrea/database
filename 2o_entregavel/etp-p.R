@@ -36,7 +36,7 @@ for (i in levsMes) {
 
 cat("\n----------------------------------------------\n")
 
-mainDir <- "C:/Users/Romilson/Documents/R/database-master/"
+mainDir <- "."
 subDir <- "images"
 dir.create(file.path(mainDir, subDir), showWarnings = FALSE)
 setwd(file.path(mainDir, subDir))
@@ -51,8 +51,8 @@ png(
 plot(c(1,12), c(min(dadosPETP$menor),max(dadosPETP$maior + 30)), 
      type="o",
      col="white",
-     main="P-ETP vs Mês",
-     xlab="Mês",
+     main="P-ETP vs MÃªs",
+     xlab="MÃªs",
      ylab="P-ETP")
 lines(dadosPETP$mes, dadosPETP$maior, type = "o", col = "blue", lwd = 0.5)
 lines(dadosPETP$mes, dadosPETP$menor, type = "o", col = "red", lwd = 0.5)
@@ -68,6 +68,6 @@ legend("topright",
        lwd=c(2,2),
        col=c("blue","red"),
        bg="grey96")
-#grid cria quadrantes no gráfico, essas linhas da divisoria, terão a cor vermelha
+#grid cria quadrantes no grÃ¡fico, essas linhas da divisoria, terÃ£o a cor vermelha
 grid(col="red", lwd = 0.5)
 dev.off()
