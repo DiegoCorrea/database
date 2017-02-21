@@ -49,7 +49,7 @@ type="o",
 col="white",
 main="Alteração Hídrica vs Mês",
 xlab="Mês",
-ylab="altHidrico(mm)")
+ylab="Alteração Hidrica (mm)")
 lines(dadosALT$mes, dadosALT$maior, type = "o", col = "red", lwd = 0.5)
 lines(dadosALT$mes, dadosALT$menor, type = "o", col = "blue", lwd = 0.5)
 lines(dadosALT$mes, dadosALT$media, type = "o", col = "green", lwd = 0.5)
@@ -68,3 +68,17 @@ legend("topright",
 #grid cria quadrantes no gráfico, essas linhas da divisoria, terão a cor vermelha
 grid(col="red", lwd = 0.5)
 dev.off()
+
+
+print("Dados Calculados a partir de todas as entradas")
+print("=Alteração Hidrica")
+print("--Menor")
+print(min(database$altHidrico))
+print("--Maior")
+print(max(database$altHidrico))
+print("--Media")
+print(mean(database$altHidrico))
+print("--Mediana")
+print(median(database$altHidrico))
+print("--Moda")
+print(getmode(database$altHidrico))
