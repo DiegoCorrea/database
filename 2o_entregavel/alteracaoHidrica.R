@@ -1,13 +1,10 @@
+getmode <- function(v) {
+  uniqv <- unique(v)
+  uniqv[which.max(tabulate(match(v, uniqv)))]
+}
 database <- read.csv(file="embrapaFine.csv", header=TRUE, sep=";", col.names= c("mes","temperatura","pluviometrico","evaPotencial","armazenHidrico","evaReal","defHidrica","excedHidrico","cidade"), encoding= "UFT8")
 
-altHidr <- c()
-for(j in database){
-	cat(j)
-	cat("\n")
-}
-
-
-
+database['altHidrico'] <- c(database$pluviometrico - database$evaReal - database$excedHidrico)
 
 ##########################################################
 levsMes <- unique(database$mes)
@@ -24,11 +21,11 @@ for (i in levsMes) {
   mes <- subset(database, mes == i)
 
   tmp <- data.frame(
-    menor = min(mes$ALT),
-    maior = max(mes$ALT),
-    media = mean(mes$ALT),
-    mediana = median(mes$ALT),
-    moda = getmode(mes$ALT),
+    menor = min(mes$altHidrico),
+    maior = max(mes$altHidrico),
+    media = mean(mes$altHidrico),
+    mediana = median(mes$altHidrico),
+    moda = getmode(mes$altHidrico),
     mes = i
   )
 
@@ -47,18 +44,18 @@ png(
   res       = 600,
   pointsize = 4)
 
-plot(c(1,12), c(dadosALT$menor,dadosALT$maior + 30), 
+plot(c(1,12), c(min(dadosALT$menor),max(dadosALT$maior + 30)), 
 type="o",
 col="white",
 main="Alteração Hídrica vs Mês",
 xlab="Mês",
-ylab="ALT(mm)")
+ylab="altHidrico(mm)")
 lines(dadosALT$mes, dadosALT$maior, type = "o", col = "red", lwd = 0.5)
 lines(dadosALT$mes, dadosALT$menor, type = "o", col = "blue", lwd = 0.5)
 lines(dadosALT$mes, dadosALT$media, type = "o", col = "green", lwd = 0.5)
 lines(dadosALT$mes, dadosALT$mediana, type = "o", col = "black", lwd = 0.5)
 lines(dadosALT$mes, dadosALT$moda, type = "o", col = "pink", lwd = 0.5)
-legend("bottomright",
+legend("topright",
   inset=.05,
   cex = 0.5,
   title="Legenda",
