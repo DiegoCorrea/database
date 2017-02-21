@@ -1,0 +1,337 @@
+Mês;T(°C);P(mm);ETP(mm);ARM(mm);ETR(mm);DEF(mm);EXC(mm);Cidade
+Jan;25,6;62;134;13;75;59;0;Alagoinhas
+Fev;24,6;74;109;9;78;31;0;Alagoinhas
+Mar;25,7;118;133;8;119;14;0;Alagoinhas
+Abr;24,9;152;112;47;112;0;0;Alagoinhas
+Mai;23,6;175;95;100;95;0;27;Alagoinhas
+Jun;22,7;143;80;100;80;0;63;Alagoinhas
+Jul;21;117;65;100;65;0;52;Alagoinhas
+Ago;21,7;82;73;100;73;0;9;Alagoinhas
+Set;22,6;60;83;80;80;2;0;Alagoinhas
+Out;24,2;63;109;50;93;17;0;Alagoinhas
+Nov;24,8;87;118;37;100;18;0;Alagoinhas
+Dez;25,4;100;135;26;111;24;0;Alagoinhas
+Jan;26,1;12;136;0;12;124;0;Barra
+Fev;27,2;40;144;0;40;104;0;Barra
+Mar;27;82;152;0;82;70;0;Barra
+Abr;26,4;141;133;8;133;0;0;Barra
+Mai;25,9;106;126;7;107;18;0;Barra
+Jun;26,4;98;127;5;100;28;0;Barra
+Jul;25,5;106;117;4;106;10;0;Barra
+Ago;25,2;64;113;3;66;48;0;Barra
+Set;24,4;7;101;1;9;92;0;Barra
+Out;23,3;3;91;0;4;88;0;Barra
+Nov;23,6;1;95;0;1;93;0;Barra
+Dez;24,6;1;114;0;1;113;0;Barra
+Jan;24,7;178;117;100;117;0;61;Barreiras
+Fev;24,7;146;107;100;107;0;39;Barreiras
+Mar;24,6;157;115;100;115;0;42;Barreiras
+Abr;24,3;95;104;92;103;0;0;Barreiras
+Mai;23,4;22;93;45;69;24;0;Barreiras
+Jun;22,4;12;77;23;34;44;0;Barreiras
+Jul;22,2;2;77;11;14;63;0;Barreiras
+Ago;23,6;5;95;5;12;83;0;Barreiras
+Set;25,9;20;125;2;23;102;0;Barreiras
+Out;25,9;103;133;1;103;29;0;Barreiras
+Nov;25,3;176;123;54;123;0;0;Barreiras
+Dez;24,7;205;120;100;120;0;39;Barreiras
+Jan;25,8;80;134;58;122;12;0;Bom Jesus da Lapa
+Fev;25,9;102;124;47;114;11;0;Bom Jesus da Lapa
+Mar;25;176;120;100;120;0;2;Bom Jesus da Lapa
+Abr;25,3;266;117;100;117;0;149;Bom Jesus da Lapa
+Mai;24,4;286;105;100;105;0;181;Bom Jesus da Lapa
+Jun;23,2;237;85;100;85;0;152;Bom Jesus da Lapa
+Jul;22,5;194;79;100;79;0;115;Bom Jesus da Lapa
+Ago;22,4;131;80;100;80;0;51;Bom Jesus da Lapa
+Set;23,4;99;91;100;91;0;8;Bom Jesus da Lapa
+Out;24,6;99;113;87;112;1;0;Bom Jesus da Lapa
+Nov;25,3;166;123;100;123;0;30;Bom Jesus da Lapa
+Dez;25,8;140;138;100;138;0;2;Bom Jesus da Lapa
+Jan;22;156;93;100;93;0;63;Caitité
+Fev;22,1;88;87;100;87;0;1;Caitité
+Mar;22,6;97;99;98;99;0;0;Caitité
+Abr;21,6;67;83;84;81;1;0;Caitité
+Mai;20,7;17;75;47;54;21;0;Caitité
+Jun;19,7;15;63;29;33;30;0;Caitité
+Jul;19,3;10;62;17;22;40;0;Caitité
+Ago;20,1;6;69;9;14;55;0;Caitité
+Set;21,1;12;77;5;16;61;0;Caitité
+Out;22,3;77;94;4;78;17;0;Caitité
+Nov;22,2;165;93;76;93;0;0;Caitité
+Dez;22,2;180;98;100;98;0;58;Caitité
+Jan;25,8;80;133;59;121;12;0;Camaçari
+Fev;25,9;102;124;47;114;10;0;Camaçari
+Mar;25;176;120;100;120;0;3;Camaçari
+Abr;25,3;266;117;100;117;0;149;Camaçari
+Mai;24,4;286;105;100;105;0;181;Camaçari
+Jun;23,2;237;85;100;85;0;152;Camaçari
+Jul;22,5;194;80;100;80;0;114;Camaçari
+Ago;22,4;131;80;100;80;0;51;Camaçari
+Set;23,4;99;91;100;91;0;8;Camaçari
+Out;24,6;99;113;87;112;1;0;Camaçari
+Nov;25,3;166;123;100;123;0;30;Camaçari
+Dez;25,8;140;137;100;137;0;3;Camaçari
+Jan;25,9;173;137;100;137;0;20;Canavieiras
+Fev;25,9;150;126;100;126;0;24;Canavieiras
+Mar;25,7;145;132;100;132;0;13;Canavieiras
+Abr;24,9;193;112;100;112;0;81;Canavieiras
+Mai;22,1;147;78;100;78;0;69;Canavieiras
+Jun;22,3;149;76;100;76;0;73;Canavieiras
+Jul;21,9;177;74;100;74;0;103;Canavieiras
+Ago;22,1;105;77;100;77;0;28;Canavieiras
+Set;23,2;127;89;100;89;0;38;Canavieiras
+Out;24,1;167;108;100;108;0;59;Canavieiras
+Nov;24,8;153;117;100;117;0;36;Canavieiras
+Dez;25,6;120;137;85;135;1;0;Canavieiras
+Jan;26,2;126;143;84;142;1;0;Caravelas
+Fev;26,5;65;136;42;108;28;0;Caravelas
+Mar;26,4;112;144;30;123;20;0;Caravelas
+Abr;25,5;144;119;55;119;0;0;Caravelas
+Mai;24,2;120;101;74;101;0;0;Caravelas
+Jun;22,9;97;79;92;79;0;0;Caravelas
+Jul;22,2;110;74;100;74;0;28;Caravelas
+Ago;22,3;65;77;89;76;1;0;Caravelas
+Set;23,1;87;86;90;86;0;0;Caravelas
+Out;24,2;148;108;100;108;0;30;Caravelas
+Nov;25,1;176;122;100;122;0;54;Caravelas
+Dez;25,6;139;137;100;137;0;2;Caravelas
+Jan;25,2;162;124;90;124;0;0;Carinhanha
+Fev;25,8;118;123;86;122;1;0;Carinhanha
+Mar;25,7;88;130;56;118;13;0;Carinhanha
+Abr;25,1;51;113;30;77;36;0;Carinhanha
+Mai;24,4;5;103;11;24;79;0;Carinhanha
+Jun;22,4;2;74;6;8;66;0;Carinhanha
+Jul;22,6;2;78;3;5;73;0;Carinhanha
+Ago;24,5;2;103;1;4;100;0;Carinhanha
+Set;26;13;125;0;14;111;0;Carinhanha
+Out;26,4;64;141;0;64;76;0;Carinhanha
+Nov;26,1;117;135;0;117;18;0;Carinhanha
+Dez;25,8;189;137;52;137;0;0;Carinhanha
+Jan;26,9;71;151;3;75;76;0;Cipó
+Fev;26,8;70;137;1;71;66;0;Cipó
+Mar;26,6;88;145;1;89;57;0;Cipó
+Abr;25,7;145;122;23;122;0;0;Cipó
+Mai;24,5;168;106;86;106;0;0;Cipó
+Jun;23,1;137;83;100;83;0;40;Cipó
+Jul;22,5;96;78;100;78;0;18;Cipó
+Ago;22,5;72;79;93;79;0;0;Cipó
+Set;23;54;84;69;78;6;0;Cipó
+Out;25,2;33;121;29;73;48;0;Cipó
+Nov;26,2;61;136;14;76;60;0;Cipó
+Dez;26,5;73;148;6;80;68;0;Cipó
+Jan;23,9;181;108;100;108;0;73;Correntina
+Fev;23,9;169;100;100;100;0;69;Correntina
+Mar;23,7;132;105;100;105;0;27;Correntina
+Abr;23,3;70;94;79;91;3;0;Correntina
+Mai;22,6;7;86;36;50;36;0;Correntina
+Jun;21,2;3;68;19;20;48;0;Correntina
+Jul;21,2;2;70;9;11;59;0;Correntina
+Ago;22,8;2;87;4;7;80;0;Correntina
+Set;25,2;20;116;2;22;93;0;Correntina
+Out;25,1;106;122;1;106;16;0;Correntina
+Nov;24,6;164;115;50;115;0;0;Correntina
+Dez;24,2;229;116;100;116;0;63;Correntina
+Jan;25;174;125;100;125;0;49;Guaratinga
+Fev;24,8;143;112;100;112;0;31;Guaratinga
+Mar;25,3;97;128;74;123;4;0;Guaratinga
+Abr;23,9;96;101;70;100;1;0;Guaratinga
+Mai;22,9;85;89;67;88;1;0;Guaratinga
+Jun;21,4;63;69;63;67;2;0;Guaratinga
+Jul;20,9;73;66;70;66;0;0;Guaratinga
+Ago;21,2;55;71;60;65;5;0;Guaratinga
+Set;22,7;84;86;59;85;1;0;Guaratinga
+Out;23,4;108;101;66;101;0;0;Guaratinga
+Nov;23,9;141;107;99;107;0;0;Guaratinga
+Dez;24,6;128;123;100;123;0;4;Guaratinga
+Jan;25,9;144;136;100;136;0;8;Ilhéus
+Fev;26;190;127;100;127;0;63;Ilhéus
+Mar;25,9;210;135;100;135;0;75;Ilhéus
+Abr;25,1;202;114;100;114;0;88;Ilhéus
+Mai;24;180;100;100;100;0;80;Ilhéus
+Jun;22,7;179;79;100;79;0;100;Ilhéus
+Jul;22,1;188;75;100;75;0;113;Ilhéus
+Ago;22,4;136;80;100;80;0;56;Ilhéus
+Set;23,4;148;91;100;91;0;57;Ilhéus
+Out;24,2;148;108;100;108;0;40;Ilhéus
+Nov;24,8;149;116;100;116;0;33;Ilhéus
+Dez;25,4;169;132;100;132;0;37;Ilhéus
+Jan;23,8;110;107;21;107;0;0;Irecê
+Fev;24;91;101;19;93;8;0;Irecê
+Mar;23,8;101;107;18;102;5;0;Irecê
+Abr;23,3;53;95;12;59;36;0;Irecê
+Mai;22,4;12;86;6;18;68;0;Irecê
+Jun;21,3;6;71;3;9;62;0;Irecê
+Jul;21;3;70;1;4;66;0;Irecê
+Ago;21,6;3;77;1;4;73;0;Irecê
+Set;23,2;13;93;0;13;80;0;Irecê
+Out;24,4;39;113;0;39;74;0;Irecê
+Nov;24,4;90;113;0;90;23;0;Irecê
+Dez;24,1;132;114;18;114;0;0;Irecê
+Jan;26;117;136;0;117;19;0;Itaberaba
+Fev;26,1;91;127;0;91;36;0;Itaberaba
+Mar;26;90;136;0;90;46;0;Itaberaba
+Abr;25,3;68;117;0;68;49;0;Itaberaba
+Mai;24,2;43;102;0;43;59;0;Itaberaba
+Jun;22,7;46;79;0;46;33;0;Itaberaba
+Jul;21,9;33;73;0;33;40;0;Itaberaba
+Ago;22,4;24;79;0;24;55;0;Itaberaba
+Set;23,4;21;91;0;21;70;0;Itaberaba
+Out;25,1;42;120;0;42;78;0;Itaberaba
+Nov;25,7;71;129;0;71;58;0;Itaberaba
+Dez;25,9;116;139;0;116;23;0;Itaberaba
+Jan;24,7;84;119;0;84;35;0;Ituaçu
+Fev;24,6;143;108;35;108;0;0;Ituaçu
+Mar;24,6;92;117;27;100;17;0;Ituaçu
+Abr;24,6;91;110;22;96;14;0;Ituaçu
+Mai;23,2;54;93;15;61;32;0;Ituaçu
+Jun;22,1;24;76;9;30;46;0;Ituaçu
+Jul;21,3;16;71;5;20;51;0;Ituaçu
+Ago;21,1;6;70;3;8;62;0;Ituaçu
+Set;22,1;9;80;1;10;69;0;Ituaçu
+Out;23,7;23;104;1;24;80;0;Ituaçu
+Nov;24,4;85;113;0;85;28;0;Ituaçu
+Dez;24,9;81;126;0;81;45;0;Ituaçu
+Jan;22,3;94;98;55;139;-41;0;Ituruçu
+Fev;22,3;89;90;55;90;0;0;Ituruçu
+Mar;22,2;92;96;53;94;2;0;Ituruçu
+Abr;21,5;76;84;49;80;4;0;Ituruçu
+Mai;19,9;56;71;42;63;8;0;Ituruçu
+Jun;19;62;60;44;60;0;0;Ituruçu
+Jul;18,1;63;55;51;55;0;0;Ituruçu
+Ago;18,7;41;61;42;50;11;0;Ituruçu
+Set;19,5;33;66;30;45;21;0;Ituruçu
+Out;20,6;66;80;26;70;10;0;Ituruçu
+Nov;21,6;88;89;26;88;1;0;Ituruçu
+Dez;22,1;126;99;53;99;0;0;Ituruçu
+Jan;25,4;99;127;0;99;28;0;Jacobina
+Fev;25,5;82;118;0;82;36;0;Jacobina
+Mar;25,6;120;130;0;120;10;0;Jacobina
+Abr;24,6;91;109;0;91;18;0;Jacobina
+Mai;23,3;48;93;0;48;45;0;Jacobina
+Jun;22,1;53;76;0;53;23;0;Jacobina
+Jul;21,2;41;69;0;41;28;0;Jacobina
+Ago;21,8;40;76;0;40;36;0;Jacobina
+Set;23,2;31;90;0;31;59;0;Jacobina
+Out;24,7;32;116;0;32;84;0;Jacobina
+Nov;25,3;86;123;0;86;37;0;Jacobina
+Dez;24,9;116;123;0;116;7;0;Jacobina
+Jan;24,8;156;120;100;120;0;36;Lençóis
+Fev;25;151;113;100;113;0;38;Lençóis
+Mar;25,1;160;124;100;124;0;36;Lençóis
+Abr;24,1;150;103;100;103;0;47;Lençóis
+Mai;22,9;78;90;89;89;1;0;Lençóis
+Jun;21,6;82;72;99;72;0;0;Lençóis
+Jul;20,9;65;68;96;67;0;0;Lençóis
+Ago;21,7;46;76;71;71;5;0;Lençóis
+Set;22,7;49;86;49;71;15;0;Lençóis
+Out;23,8;96;105;45;100;5;0;Lençóis
+Nov;24,3;156;111;90;111;0;0;Lençóis
+Dez;24,4;172;118;100;118;0;44;Lençóis
+Jan;25,7;37;132;0;37;96;0;Monte Santo
+Fev;24,3;45;105;0;45;60;0;Monte Santo
+Mar;24,2;64;113;0;64;48;0;Monte Santo
+Abr;23,3;69;96;0;69;27;0;Monte Santo
+Mai;21,5;74;78;0;74;5;0;Monte Santo
+Jun;20,4;57;65;0;57;8;0;Monte Santo
+Jul;19,8;42;62;0;42;19;0;Monte Santo
+Ago;20;37;64;0;37;28;0;Monte Santo
+Set;21,5;19;77;0;19;58;0;Monte Santo
+Out;23,2;27;100;0;27;73;0;Monte Santo
+Nov;24,2;49;111;0;49;61;0;Monte Santo
+Dez;24;78;114;0;78;36;0;Monte Santo
+Jan;21,1;93;89;68;89;0;0;Morro do Chapéu
+Fev;21,2;86;82;71;82;0;0;Morro do Chapéu
+Mar;21;93;88;77;88;0;0;Morro do Chapéu
+Abr;20,6;68;79;69;76;3;0;Morro do Chapéu
+Mai;19,2;33;69;48;54;15;0;Morro do Chapéu
+Jun;17,8;39;56;40;46;9;0;Morro do Chapéu
+Jul;17,2;27;53;31;36;17;0;Morro do Chapéu
+Ago;17,5;21;56;22;30;26;0;Morro do Chapéu
+Set;18,9;19;66;14;27;38;0;Morro do Chapéu
+Out;20,2;43;80;9;47;33;0;Morro do Chapéu
+Nov;20,7;88;84;14;84;0;0;Morro do Chapéu
+Dez;20,9;139;89;63;89;0;0;Morro do Chapéu
+Jan;27,4;61;159;0;61;98;0;Paulo Afonso
+Fev;27,2;55;143;0;55;88;0;Paulo Afonso
+Mar;27,1;93;154;0;93;61;0;Paulo Afonso
+Abr;25,5;81;118;0;81;37;0;Paulo Afonso
+Mai;24,2;55;99;0;55;44;0;Paulo Afonso
+Jun;23,6;61;87;0;61;26;0;Paulo Afonso
+Jul;23;53;82;0;53;29;0;Paulo Afonso
+Ago;23,5;25;89;0;25;64;0;Paulo Afonso
+Set;24,9;18;108;0;18;90;0;Paulo Afonso
+Out;26,4;15;139;0;15;124;0;Paulo Afonso
+Nov;27,7;18;162;0;18;144;0;Paulo Afonso
+Dez;27,3;47;162;0;47;115;0;Paulo Afonso
+Jan;26,5;111;142;66;135;7;0;Remanso
+Fev;26,6;121;133;58;128;5;0;Remanso
+Mar;26,7;145;147;57;146;1;0;Remanso
+Abr;25,2;322;114;100;114;0;165;Remanso
+Mai;25,2;325;116;100;116;0;209;Remanso
+Jun;24,3;351;98;100;98;0;253;Remanso
+Jul;23,6;204;91;100;91;0;113;Remanso
+Ago;23,7;136;94;100;94;0;42;Remanso
+Set;24,2;112;99;100;99;0;13;Remanso
+Out;25;122;117;100;117;0;5;Remanso
+Nov;25,5;118;123;95;123;0;0;Remanso
+Dez;26;132;138;90;137;0;0;Remanso
+Jan;26,5;111;145;62;136;9;0;Salvador
+Fev;26,6;121;135;54;129;6;0;Salvador
+Mar;26,7;145;147;53;146;1;0;Salvador
+Abr;25,2;322;114;100;114;0;161;Salvador
+Mai;25,2;325;114;100;114;0;211;Salvador
+Jun;24,3;351;96;100;96;0;255;Salvador
+Jul;23,6;204;90;100;90;0;114;Salvador
+Ago;23,7;136;92;100;92;0;44;Salvador
+Set;24,2;112;99;100;99;0;13;Salvador
+Out;25;122;117;100;117;0;5;Salvador
+Nov;25,5;118;124;94;124;0;0;Salvador
+Dez;26;132;140;87;139;1;0;Salvador
+Jan;24,6;161;115;100;115;0;39;Santa Rita de Cássia
+Fev;24,4;140;104;100;104;0;36;Santa Rita de Cássia
+Mar;24,4;155;112;100;112;0;43;Santa Rita de Cássia
+Abr;24,2;101;103;98;103;0;0;Santa Rita de Cássia
+Mai;23,7;20;98;45;73;25;0;Santa Rita de Cássia
+Jun;22,1;4;75;22;27;48;0;Santa Rita de Cássia
+Jul;21,1;1;68;11;12;56;0;Santa Rita de Cássia
+Ago;23;1;89;5;8;81;0;Santa Rita de Cássia
+Set;25,1;19;114;2;22;92;0;Santa Rita de Cássia
+Out;26,1;70;136;1;71;65;0;Santa Rita de Cássia
+Nov;25,3;160;123;38;123;0;0;Santa Rita de Cássia
+Dez;24,7;175;120;93;120;0;0;Santa Rita de Cássia
+Jan;24,9;102;120;0;102;18;0;Senhor do Bonfim
+Fev;24,6;118;107;11;107;0;0;Senhor do Bonfim
+Mar;24,7;109;118;10;110;8;0;Senhor do Bonfim
+Abr;23,7;96;99;10;96;2;0;Senhor do Bonfim
+Mai;23,1;64;93;8;66;26;0;Senhor do Bonfim
+Jun;21,5;63;72;7;64;8;0;Senhor do Bonfim
+Jul;20,7;54;66;6;55;11;0;Senhor do Bonfim
+Ago;21,5;34;75;4;36;39;0;Senhor do Bonfim
+Set;22,6;34;85;2;36;50;0;Senhor do Bonfim
+Out;24,2;39;110;1;40;70;0;Senhor do Bonfim
+Nov;25,1;54;121;1;55;66;0;Senhor do Bonfim
+Dez;25,2;83;128;0;83;45;0;Senhor do Bonfim
+Jan;25,4;82;128;5;85;43;0;Serrinha
+Fev;25,3;80;116;3;81;35;0;Serrinha
+Mar;25,1;103;123;3;104;20;0;Serrinha
+Abr;24,3;84;106;2;85;21;0;Serrinha
+Mai;23,1;109;92;19;92;0;0;Serrinha
+Jun;21,8;95;74;41;74;0;0;Serrinha
+Jul;21;80;68;53;68;0;0;Serrinha
+Ago;21,2;55;71;45;63;8;0;Serrinha
+Set;22,3;38;82;29;54;28;0;Serrinha
+Out;23,8;50;104;17;62;42;0;Serrinha
+Nov;24,8;65;117;10;72;45;0;Serrinha
+Dez;25,3;102;130;8;104;26;0;Serrinha
+Jan;21,5;109;93;90;93;0;0;Vitória da Conquista
+Fev;21,5;64;85;73;81;4;0;Vitória da Conquista
+Mar;21,8;87;94;68;92;2;0;Vitória da Conquista
+Abr;20,7;58;78;56;70;8;0;Vitória da Conquista
+Mai;19,8;19;71;33;41;29;0;Vitória da Conquista
+Jun;18;21;54;24;30;24;0;Vitória da Conquista
+Jul;17,8;18;54;17;25;29;0;Vitória da Conquista
+Ago;18,6;18;61;11;24;37;0;Vitória da Conquista
+Set;19,5;30;68;7;33;34;0;Vitória da Conquista
+Out;20,7;56;83;6;58;25;0;Vitória da Conquista
+Nov;21,2;124;87;42;87;0;0;Vitória da Conquista
+Dez;21,6;128;96;74;96;0;0;Vitória da Conquista
