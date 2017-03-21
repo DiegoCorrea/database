@@ -1,0 +1,11 @@
+Dentro da pasta dos Scripts para Postgres
+1- Criar banco no Postgres
+  Criando usuario: sudo -u postgres createuser bd
+  Acessando terminal do postgres: sudo su postgres
+  Criando Banco: createdb embrapa;
+  Acessando Banco: psql embrapa
+
+2- Criando Tabelas
+
+
+3- Carregando os Dados
