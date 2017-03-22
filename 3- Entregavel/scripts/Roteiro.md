@@ -12,6 +12,18 @@ OBS: Dentro do psql digite: `\timing on`, para o contador de tempo ser iniciado
 OBS: Com `\dt` é possivel ver todas as tabelas do banco  
 3. Carregando base CSV: `\i IMPORTCSV.sql`  
   
-4. Inserindo novos dados: `\i INSERTS.sql`  
+4. Inserindo novos dados: `\i INSERT.sql`  
   
-5. Busca nas Tabelas: ``  
+5. Busca nas Tabelas: `\i SELECT.sql`  
+  
+6. Atualizando os Dados: `\i UPDATE.sql`  
+  
+7. (Re)Busca nas Tabelas: `\i SELECT.sql`  
+  
+8. Deletando Dados: `\i DELETE.sql`  
+
+9. (Re)Busca nas Tabelas: `\i SELECT.sql`  
+  
+10. Joins:  
+  
+11. Deletando Tabelas: `\i DROPTABLE.sql`  
