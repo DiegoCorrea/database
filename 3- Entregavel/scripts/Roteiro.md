@@ -24,6 +24,10 @@ OBS: Com `\dt` é possivel ver todas as tabelas do banco
 
 9. (Re)Busca nas Tabelas: `\i SELECT.sql`  
   
-10. Joins:  
+10. Joins e Group By:  
+  Join:  `\i JOIN.sql`  
+  Killer Join: `\i KILLERJOIN.sql`  
   
 11. Deletando Tabelas: `\i DROPTABLE.sql`  
+  
+OBS: Com `\dt` é possivel ver todas as tabelas do banco  
