@@ -15,6 +15,8 @@
 2. Criando Tabelas:  
   Postgres: `\i CREATETABLE.sql`  
   Volt: `file ./scripts/volt/CREATETABLE.sql;`  
+
+2.5. Particionamento:  `file ./scripts/volt/PARTITION.sql;`  
   
 3. Carregando base CSV:  
   Postgres: Com `\dt` é possivel ver todas as tabelas do banco  
