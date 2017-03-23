@@ -1,18 +1,18 @@
 ### Roteiro de Execução
 
-1. Criaando e iniciando o banco  
-  Dentro da pasta dos Scripts para Postgres  
+1. Criando e iniciando o banco  
+* Dentro da pasta dos Scripts para Postgres  
   * Criando usuario: `sudo -u postgres createuser bd`  
   * Acessando terminal do postgres: `sudo su postgres`  
   * Criando Banco: `createdb embrapa;`  
   * Acessando Banco: `psql embrapa`  
   
-  Dentro da pasta do VoltDB  
+* Dentro da pasta do VoltDB  
   * Iniciando o VoltDB: `sh scripts/volt/startVolt.sh`  
   * Terminal: `bin/sqlcmd`  
   
   Postgres: Dentro do psql digite `\timing on`, para o contador de tempo ser iniciado  
-2. Criando Tabelas: 
+2. Criando Tabelas:  
   Postgres: `\i CREATETABLE.sql`  
   Volt: `file ./scripts/volt/CREATETABLE.sql;`  
   
@@ -23,8 +23,8 @@
   Volt: `sh scripts/volt/CSVLOADER.sh`  
   
 4. Inserindo novos dados:  
- Postgres: `\i INSERT.sql`  
- Volt: `file ./scripts/volt/INSERT.sql;`  
+  Postgres: `\i INSERT.sql`  
+  Volt: `file ./scripts/volt/INSERT.sql;`  
   
 5. Busca nas Tabelas:  
   Postgres: `\i SELECT.sql`  
