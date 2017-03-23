@@ -1,11 +1,11 @@
 ### Roteiro de Execução
 
-1. Criar banco no Postgres  
-**Dentro da pasta dos Scripts para Postgres**  
-  Criando usuario: `sudo -u postgres createuser bd`  
-  Acessando terminal do postgres: `sudo su postgres`  
-  Criando Banco: `createdb embrapa;`  
-  Acessando Banco: `psql embrapa`  
+1. Criaando e iniciando o banco  
+*Dentro da pasta dos Scripts para Postgres*  
+  * Criando usuario: `sudo -u postgres createuser bd`  
+  * Acessando terminal do postgres: `sudo su postgres`  
+  * Criando Banco: `createdb embrapa;`  
+  * Acessando Banco: `psql embrapa`  
   
 **Dentro da pasta do VoltDB**  
 * Iniciando o VoltDB:  
