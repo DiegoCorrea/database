@@ -46,19 +46,20 @@
   Postgres: `\i SELECT.sql`  
   Volt: `file ./scripts/volt/SELECT.sql;`  
   
-10. Joins e Group By:  
+10. Joins:  
 * Postgres
   * Join: `\i JOIN.sql`  
-  * Group By: `\i GROUPBY.sql`  
   * Killer Join: `\i KILLERJOIN.sql`  
 * Volt
   * Join: `file ./scripts/volt/JOIN.sql`  
-  * Group By: `\i GROUPBY.sql`  
   * Killer Join: `file ./scripts/volt/KILLERJOIN.sql`  
   
 11. Deletando Tabelas: 
   Postgres: `\i DROPTABLE.sql`  
   Volt: `file ./scripts/volt/DROPTABLE.sql;`  
+
+12. Deletando o banco:
+  Postgres: `dropbd embrapa`
   
 Postgres: Com `\dt` é possivel ver todas as tabelas do banco  
 Volt: Com `SHOW tables` é possivel ver todas as tabelas do banco  
