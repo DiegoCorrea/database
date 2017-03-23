@@ -1,29 +1,23 @@
 ### Roteiro de Execução
 
 1. Criaando e iniciando o banco  
-*Dentro da pasta dos Scripts para Postgres*  
+  Dentro da pasta dos Scripts para Postgres  
   * Criando usuario: `sudo -u postgres createuser bd`  
   * Acessando terminal do postgres: `sudo su postgres`  
   * Criando Banco: `createdb embrapa;`  
   * Acessando Banco: `psql embrapa`  
   
-**Dentro da pasta do VoltDB**  
-* Iniciando o VoltDB:  
-  `sudo bash -c "echo never > /sys/kernel/mm/transparent_hugepage/enabled"`  
-  `sudo bash -c "echo never > /sys/kernel/mm/transparent_hugepage/defrag"`  
-  `bin/voltdb init`  
-  `bin/voltdb start`  
-* Terminal  
-  `bin/sqlcmd`  
-  `SHOW tables;`
+  Dentro da pasta do VoltDB  
+  * Iniciando o VoltDB: `sh scripts/volt/startVolt.sh`  
+  * Terminal: `bin/sqlcmd`  
   
-OBS: Dentro do psql digite: `\timing on`, para o contador de tempo ser iniciado  
+  Postgres: Dentro do psql digite `\timing on`, para o contador de tempo ser iniciado  
 2. Criando Tabelas: 
   Postgres: `\i CREATETABLE.sql`  
   Volt: `file ./scripts/volt/CREATETABLE.sql;`  
   
-Postgres: Com `\dt` é possivel ver todas as tabelas do banco  
-Volt: Com `SHOW tables` é possivel ver todas as tabelas do banco  
+  Postgres: Com `\dt` é possivel ver todas as tabelas do banco  
+  Volt: Com `SHOW tables` é possivel ver todas as tabelas do banco  
 3. Carregando base CSV:  
   Postgres: `\i IMPORTCSV.sql`  
   Volt: `sh scripts/volt/CSVLOADER.sh`  
