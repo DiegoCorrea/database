@@ -18,8 +18,8 @@
   
 3. Carregando base CSV:  
   Postgres: Com `\dt` é possivel ver todas as tabelas do banco  
-  Volt: Com `SHOW tables` é possivel ver todas as tabelas do banco  
   Postgres: `\i IMPORTCSV.sql`  
+  Volt: Com `SHOW tables` é possivel ver todas as tabelas do banco  
   Volt: `sh scripts/volt/CSVLOADER.sh`  
   
 4. Inserindo novos dados:  
