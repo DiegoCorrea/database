@@ -16,9 +16,9 @@
   Postgres: `\i CREATETABLE.sql`  
   Volt: `file ./scripts/volt/CREATETABLE.sql;`  
   
+3. Carregando base CSV:  
   Postgres: Com `\dt` é possivel ver todas as tabelas do banco  
   Volt: Com `SHOW tables` é possivel ver todas as tabelas do banco  
-3. Carregando base CSV:  
   Postgres: `\i IMPORTCSV.sql`  
   Volt: `sh scripts/volt/CSVLOADER.sh`  
   
